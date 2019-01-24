@@ -13,6 +13,7 @@ import PresentationalComponent from './PresentationalComponent';
 import List from './List';
 import ItemForm from './ItemForm';
 import ScrollViewLongList from './ScrollViewLongList';
+import ImageExample from './ImageExample';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -54,6 +55,8 @@ export default class App extends Component<Props> {
             <ScrollViewLongList/>
           </View>
         </View>
+
+        <ImageExample/>
       </ScrollView>
     );
   }
