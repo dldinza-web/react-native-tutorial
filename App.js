@@ -11,6 +11,7 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 
 import PresentationalComponent from './PresentationalComponent';
 import List from './List';
+import ItemForm from './ItemForm';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -42,6 +43,8 @@ export default class App extends Component<Props> {
         </Text>
 
         <List/>
+
+        <ItemForm />
       </View>
     );
   }
