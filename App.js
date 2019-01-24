@@ -7,11 +7,12 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, ScrollView} from 'react-native';
 
 import PresentationalComponent from './PresentationalComponent';
 import List from './List';
 import ItemForm from './ItemForm';
+import ScrollViewLongList from './ScrollViewLongList';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -35,17 +36,25 @@ export default class App extends Component<Props> {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native Tutorial</Text>
-        <PresentationalComponent myState={this.state.myState} updateState={this.updateState} />
-        <Text style={styles.finalState} onPress={this.updateAnotherState}>
-          {this.state.anotherState}
-        </Text>
+      <ScrollView>
+        <View>
+          <View style={styles.container}>
+            <Text style={styles.welcome}>Welcome to React Native Tutorial</Text>
+            <PresentationalComponent myState={this.state.myState} updateState={this.updateState} />
+            <Text style={styles.finalState} onPress={this.updateAnotherState}>
+              {this.state.anotherState}
+            </Text>
+          </View>
 
-        <List/>
+          <View>
+            <List/>
 
-        <ItemForm />
-      </View>
+            <ItemForm />
+
+            <ScrollViewLongList/>
+          </View>
+        </View>
+      </ScrollView>
     );
   }
 }

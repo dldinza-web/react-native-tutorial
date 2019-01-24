@@ -27,7 +27,6 @@ class ItemForm extends Component {
           <Text>{this.state.email}</Text>
         </View>
 
-
         <TextInput
           placeholder="Email"
           placeholderTextColor="#9a73ef"
@@ -60,14 +59,11 @@ export default ItemForm
 
 const styles = StyleSheet.create({
   form: {
-    width: 400,
-    paddingTop: 23,
-    alignItems: 'center'
+    padding: 23
   },
   input: {
-    margin: 15,
+    marginTop: 15,
     height: 40,
-    width: 400,
     borderWidth: 1,
     borderColor: '#7a42f4',
     padding: 10,
@@ -79,9 +75,8 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: '#7a42f4',
     color: '#ffffff',
-    margin: 15,
+    marginTop: 15,
     height: 40,
-    width: 400,
     textAlign: 'center'
   },
   label: {
