@@ -14,6 +14,7 @@ import List from './List';
 import ItemForm from './ItemForm';
 import ScrollViewLongList from './ScrollViewLongList';
 import ImageExample from './ImageExample';
+import HttpRemoteItems from './HttpRemoteItems';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -57,6 +58,8 @@ export default class App extends Component<Props> {
         </View>
 
         <ImageExample/>
+
+        <HttpRemoteItems />
       </ScrollView>
     );
   }
