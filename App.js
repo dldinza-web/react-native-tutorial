@@ -36,10 +36,9 @@ export default class App extends Component<Props> {
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native Tutorial</Text>
         <PresentationalComponent myState={this.state.myState} updateState={this.updateState} />
-        <Text onPress={this.updateAnotherState}>
+        <Text style={styles.finalState} onPress={this.updateAnotherState}>
           {this.state.anotherState}
         </Text>
-
       </View>
     );
   }
@@ -47,13 +46,17 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+    backgroundColor: '#F5FCFF'
   },
   welcome: {
+    width: 100,
     fontSize: 20,
+    margin: 10
+  },
+  finalState: {
     margin: 10
   }
 });
