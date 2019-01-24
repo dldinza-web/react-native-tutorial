@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
 import PresentationalComponent from './PresentationalComponent';
+import List from './List';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -39,6 +40,8 @@ export default class App extends Component<Props> {
         <Text style={styles.finalState} onPress={this.updateAnotherState}>
           {this.state.anotherState}
         </Text>
+
+        <List/>
       </View>
     );
   }
@@ -46,13 +49,13 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'space-between',
-    alignItems: 'flex-end',
+    alignItems: 'center',
     backgroundColor: '#F5FCFF'
   },
   welcome: {
-    width: 100,
+    width: 300,
     fontSize: 20,
     margin: 10
   },

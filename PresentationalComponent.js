@@ -13,7 +13,7 @@ const PresentationalComponent = (props) => {
 
 const styles = StyleSheet.create({
   myState: {
-    width: 100,
+    width: 300,
     margin: 10,
     textAlign: 'center',
     color: 'blue',
