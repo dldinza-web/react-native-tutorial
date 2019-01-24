@@ -1,5 +1,13 @@
 import React, {Component} from 'react';
-import { View, TextInput, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View,
+  TextInput,
+  Text,
+  StyleSheet,
+  Button,
+  TouchableHighlight,
+  TouchableOpacity,
+  TouchableNativeFeedback,
+  TouchableWithoutFeedback } from 'react-native';
 
 class ItemForm extends Component {
   state = {
@@ -17,6 +25,10 @@ class ItemForm extends Component {
 
   login = (state) => {
     alert(JSON.stringify(this.state));
+  }
+
+  hanlePress = () => {
+    alert('hi');
   }
 
   render() {
@@ -47,9 +59,28 @@ class ItemForm extends Component {
           style={styles.input}
         />
 
-        <TouchableOpacity style={styles.buttonsWrapper}>
-          <Text style={styles.btn} onPress={() => this.login(this.state)}>Sign in</Text>
+        <View style={styles.buttonsWrapper}>
+          <Button
+            onPress={() => this.login(this.state)}
+            title="Sign in"
+          />
+        </View>
+
+        <TouchableOpacity>
+          <Text style={[styles.btn, styles.btn1]}>Test Touchable Opacity</Text>
         </TouchableOpacity>
+
+        <TouchableHighlight>
+          <Text style={[styles.btn, styles.btn2]}>Test Touchable Highlighted</Text>
+        </TouchableHighlight>
+
+        <TouchableNativeFeedback>
+          <Text style={[styles.btn, styles.btn3]}>Test Touchable NativeFeedback</Text>
+        </TouchableNativeFeedback>
+
+        <TouchableWithoutFeedback>
+          <Text style={[styles.btn, styles.btn4]}>Test Touchable NativeFeedback</Text>
+        </TouchableWithoutFeedback>
       </View>
     )
   }
@@ -69,15 +100,8 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   buttonsWrapper: {
-    alignItems: 'center'
-  },
-  btn: {
-    padding: 10,
-    backgroundColor: '#7a42f4',
-    color: '#ffffff',
-    marginTop: 15,
-    height: 40,
-    textAlign: 'center'
+    alignItems: 'center',
+    paddingTop: 10
   },
   label: {
     fontWeight: 'bold',
@@ -85,5 +109,24 @@ const styles = StyleSheet.create({
   },
   valuesViewer: {
     flexDirection: 'row'
+  },
+  btn: {
+    padding: 10,
+    color: '#ffffff',
+    marginTop: 15,
+    height: 40,
+    textAlign: 'center'
+  },
+  btn1: {
+    backgroundColor: '#7a42f4'
+  },
+  btn2: {
+    backgroundColor: 'green'
+  },
+  btn3: {
+    backgroundColor: 'orange'
+  },
+  btn4: {
+    backgroundColor: 'purple'
   }
 })

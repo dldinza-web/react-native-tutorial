@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 
 class ScrollViewLongList extends Component {
   state = {
@@ -24,9 +24,9 @@ class ScrollViewLongList extends Component {
       <View>
           {
             this.state.names.map((item, index) => (
-              <View key={item.id} style={styles.item}>
+              <TouchableOpacity key={item.id} style={styles.item}>
                 <Text>{item.name}</Text>
-              </View>
+              </TouchableOpacity>
             ))
           }
       </View>

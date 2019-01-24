@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableHighlight, StyleSheet } from 'react-native';
 
 class List extends Component {
   state = {
@@ -30,11 +30,11 @@ class List extends Component {
       <View style={styles.list}>
         {
           this.state.names.map((item, index) => (
-            <TouchableOpacity key={index} style={styles.listItem} onPress={() => this.alertItem(item)}>
+            <TouchableHighlight key={index} style={styles.listItem} onPress={() => this.alertItem(item)}>
               <Text>
                 {item.name}
               </Text>
-            </TouchableOpacity>
+            </TouchableHighlight>
           ))
         }
       </View>
@@ -50,8 +50,7 @@ const styles = StyleSheet.create({
     padding: 10,
     marginTop: 3,
     backgroundColor: '#d9f9b1',
-    alignItems: 'center',
-    fontWeight: 'bold'
+    alignItems: 'center'
   }
 })
 
