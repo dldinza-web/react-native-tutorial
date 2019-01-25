@@ -66,7 +66,7 @@ class ItemForm extends Component {
           />
         </View>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.Login(this.state)}>
           <Text style={[styles.btn, styles.btn1]}>Test Touchable Opacity</Text>
         </TouchableOpacity>
 
