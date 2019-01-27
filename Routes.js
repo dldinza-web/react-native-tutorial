@@ -8,6 +8,7 @@ import ScrollViewLongList from './ScrollViewLongList';
 import ImageExample from './ImageExample';
 import HttpRemoteItems from './HttpRemoteItems';
 import Animations from './Animations';
+import WebViewContainer from './WebViewContainer';
 
 export const listItems = [
   {
@@ -39,6 +40,11 @@ export const listItems = [
     key: 'Animations',
     title: 'Animations',
     type: Animations
+  },
+  {
+    key: 'WebViewContainer',
+    title: 'Web Site Container',
+    type: WebViewContainer
   }
 ]
 
@@ -46,13 +52,11 @@ const Routes = () => (
   <Router>
     <Scene key="root">
       <Scene key="home" title="Home" component={Home} initial={true}></Scene>
-
       {
         listItems.map((item, index) => (
           <Scene key={item.key} title={item.title} component={item.type} ></Scene>
         ))
       }
-
     </Scene>
   </Router>
 )
