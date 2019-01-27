@@ -27,10 +27,6 @@ class ItemForm extends Component {
     alert(JSON.stringify(this.state));
   }
 
-  hanlePress = () => {
-    alert('hi');
-  }
-
   render() {
     return(
       <View style={styles.form}>
@@ -66,7 +62,7 @@ class ItemForm extends Component {
           />
         </View>
 
-        <TouchableOpacity onPress={() => this.Login(this.state)}>
+        <TouchableOpacity onPress={() => this.login(this.state)}>
           <Text style={[styles.btn, styles.btn1]}>Test Touchable Opacity</Text>
         </TouchableOpacity>
 

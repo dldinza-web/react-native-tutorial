@@ -7,80 +7,24 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, ScrollView} from 'react-native';
+import {AppRegistry} from 'react-native';
 
-import PresentationalComponent from './PresentationalComponent';
-import List from './List';
-import ItemForm from './ItemForm';
-import ScrollViewLongList from './ScrollViewLongList';
-import ImageExample from './ImageExample';
-import HttpRemoteItems from './HttpRemoteItems';
-import Animations from './Animations';
+import Routes from './Routes';
 
 type Props = {};
-export default class App extends Component<Props> {
-  state = {
-    myState: "This is my mutable state value",
-    anotherState: "Second state"
-  }
-
-  constructor() {
-    super();
-    this.updateAnotherState = this.updateAnotherState.bind(this);
-  }
-
-  updateState = () => {
-    this.setState({ myState: 'This is my new State!!' });
-  }
-
-  updateAnotherState() {
-    this.setState({ anotherState: 'Another state modified!!' });
+class App extends Component<Props> {
+  constructor(Props) {
+    super(Props);
   }
 
   render() {
     return (
-      <ScrollView>
-        <Animations />
-
-        <View>
-          <View style={styles.container}>
-            <Text style={styles.welcome}>Welcome to React Native Tutorial</Text>
-            <PresentationalComponent myState={this.state.myState} updateState={this.updateState} />
-            <Text style={styles.finalState} onPress={this.updateAnotherState}>
-              {this.state.anotherState}
-            </Text>
-          </View>
-
-          <View>
-            <List/>
-
-            <ItemForm />
-
-            <ScrollViewLongList/>
-          </View>
-        </View>
-
-        <ImageExample/>
-
-        <HttpRemoteItems />
-      </ScrollView>
+      <Routes />
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
-  },
-  welcome: {
-    width: 300,
-    fontSize: 20,
-    margin: 10
-  },
-  finalState: {
-    margin: 10
-  }
-});
+AppRegistry.registerComponent('App', () => App)
+
+export default App
+

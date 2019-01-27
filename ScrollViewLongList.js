@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
+import { ScrollView, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 class ScrollViewLongList extends Component {
   state = {
@@ -21,7 +21,7 @@ class ScrollViewLongList extends Component {
 
   render() {
     return(
-      <View>
+      <ScrollView>
           {
             this.state.names.map((item, index) => (
               <TouchableOpacity key={item.id} style={styles.item}>
@@ -29,7 +29,7 @@ class ScrollViewLongList extends Component {
               </TouchableOpacity>
             ))
           }
-      </View>
+      </ScrollView>
     )
   }
 }
