@@ -9,6 +9,7 @@ import ImageExample from './ImageExample';
 import HttpRemoteItems from './HttpRemoteItems';
 import Animations from './Animations';
 import WebViewContainer from './WebViewContainer';
+import ModalBox from './ModalBox';
 
 export const listItems = [
   {
@@ -45,6 +46,11 @@ export const listItems = [
     key: 'WebViewContainer',
     title: 'Web Site Container',
     type: WebViewContainer
+  },
+  {
+    key: 'ModalBox',
+    title: 'Modal Window',
+    type: ModalBox
   }
 ]
 

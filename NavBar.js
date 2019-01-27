@@ -27,6 +27,9 @@ class NavBar extends Component {
       case 'WebViewContainer':
         Actions.WebViewContainer()
       break;
+      case 'ModalBox':
+        Actions.ModalBox()
+      break;
     }
   }
 
