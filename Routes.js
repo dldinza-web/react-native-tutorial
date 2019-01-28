@@ -11,6 +11,7 @@ import Animations from './Animations';
 import WebViewContainer from './WebViewContainer';
 import ModalBox from './ModalBox';
 import SpinnerLoading from './SpinnerLoading';
+import DropdownSelector from './DropdownSelector';
 
 export const listItems = [
   {
@@ -53,11 +54,15 @@ export const listItems = [
     title: 'Modal Window',
     type: ModalBox
   },
-  ,
   {
     key: 'SpinnerLoading',
     title: 'Activiy Indicator',
     type: SpinnerLoading
+  },
+  {
+    key: 'DropdownSelector',
+    title: 'Select an user',
+    type: DropdownSelector
   }
 ]
 

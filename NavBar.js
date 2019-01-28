@@ -33,6 +33,9 @@ class NavBar extends Component {
       case 'SpinnerLoading':
         Actions.SpinnerLoading()
       break;
+      case 'DropdownSelector':
+        Actions.DropdownSelector()
+      break;
     }
   }
 
