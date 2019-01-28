@@ -30,6 +30,9 @@ class NavBar extends Component {
       case 'ModalBox':
         Actions.ModalBox()
       break;
+      case 'SpinnerLoading':
+        Actions.SpinnerLoading()
+      break;
     }
   }
 
@@ -52,7 +55,8 @@ class NavBar extends Component {
 
 const styles = StyleSheet.create({
   buttonsWrapper: {
-    width: 400
+    width: 400,
+    marginBottom: 20
   },
   btn: {
     padding: 10,

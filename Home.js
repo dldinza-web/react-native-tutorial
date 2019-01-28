@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, ScrollView} from 'react-native';
 
 import PresentationalComponent from './PresentationalComponent';
 import NavBar from './NavBar'
@@ -20,15 +20,18 @@ class Home extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native Tutorial</Text>
-        <PresentationalComponent myState={this.state.myState} updateState={this.updateState} />
-        <Text style={styles.finalState} onPress={this.updateAnotherState}>
-          {this.state.anotherState}
-        </Text>
+      <ScrollView>
 
-        <NavBar />
-      </View>
+        <View style={styles.container}>
+          <Text style={styles.welcome}>Welcome to React Native Tutorial</Text>
+          <PresentationalComponent myState={this.state.myState} updateState={this.updateState} />
+          <Text style={styles.finalState} onPress={this.updateAnotherState}>
+            {this.state.anotherState}
+          </Text>
+
+          <NavBar />
+        </View>
+      </ScrollView>
     )
   }
 }

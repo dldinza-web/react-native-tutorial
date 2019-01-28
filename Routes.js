@@ -10,6 +10,7 @@ import HttpRemoteItems from './HttpRemoteItems';
 import Animations from './Animations';
 import WebViewContainer from './WebViewContainer';
 import ModalBox from './ModalBox';
+import SpinnerLoading from './SpinnerLoading';
 
 export const listItems = [
   {
@@ -51,6 +52,12 @@ export const listItems = [
     key: 'ModalBox',
     title: 'Modal Window',
     type: ModalBox
+  },
+  ,
+  {
+    key: 'SpinnerLoading',
+    title: 'Activiy Indicator',
+    type: SpinnerLoading
   }
 ]
 
