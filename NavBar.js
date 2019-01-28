@@ -36,6 +36,10 @@ class NavBar extends Component {
       case 'DropdownSelector':
         Actions.DropdownSelector()
       break;
+      case 'AsyncLocalStore':
+        Actions.AsyncLocalStore()
+      break;
+
     }
   }
 

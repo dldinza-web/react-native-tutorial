@@ -12,6 +12,7 @@ import WebViewContainer from './WebViewContainer';
 import ModalBox from './ModalBox';
 import SpinnerLoading from './SpinnerLoading';
 import DropdownSelector from './DropdownSelector';
+import AsyncLocalStore from './AsyncLocalStore';
 
 export const listItems = [
   {
@@ -63,7 +64,12 @@ export const listItems = [
     key: 'DropdownSelector',
     title: 'Select an user',
     type: DropdownSelector
-  }
+  },
+  {
+    key: 'AsyncLocalStore',
+    title: 'Local Storage',
+    type: AsyncLocalStore
+  },
 ]
 
 const Routes = () => (
@@ -72,7 +78,7 @@ const Routes = () => (
       <Scene key="home" title="Home" component={Home} initial={true}></Scene>
       {
         listItems.map((item, index) => (
-          <Scene key={item.key} title={item.title} component={item.type} ></Scene>
+          <Scene key={item.key} title={item.title} component={item.type} />
         ))
       }
     </Scene>
